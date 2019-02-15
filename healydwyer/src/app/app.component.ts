@@ -5,7 +5,7 @@ import {
   transferArrayItem
 } from '@angular/cdk/drag-drop';
 import { DragulaModule } from 'ng2-dragula';
-import { CdkDragEnter, CdkDragExit } from '@angular/cdk/drag-drop';
+import { CdkDragEnter, CdkDragExit, CdkDrag } from '@angular/cdk/drag-drop';
 import { DragDropModule } from 'primeng/dragdrop';
 import * as interact from 'interactjs';
 import { DropEvent } from 'angular-draggable-droppable';
@@ -17,8 +17,8 @@ import { DropEvent } from 'angular-draggable-droppable';
 })
 export class AppComponent {
   title = 'healydwyer';
-  carQueue = [
-    {
+  carQueue = {
+    cars: [{
       car: 'CSXT-123456',
       length: '10'
     },
@@ -33,31 +33,48 @@ export class AppComponent {
     {
       car: 'CSXT-123456',
       length: '40'
-    }
-  ];
+    }]
+  };
 
-  trackOne = [
-    {
+  trackOne = {
+    cars: [{
       car: 'CSXT-123456',
       length: '10'
-    }
-  ];
+    }],
+    allow: (() => {
+      return this.trackOne.cars.length < 1;
+    })
+  };
 
-  trackTwo = [
-    {
+  trackTwo = {
+    cars: [{
       car: 'CSXT-4567234',
       length: '40'
-    }
-  ];
+    }],
+    allow: (() => {
+      return this.trackTwo.cars.length < 1;
+    })
+  };
 
-  trackThree = [
-    {
+  trackThree = {
+    cars: [{
+      car: 'CSXT-837462',
+      length: '20'
+    }],
+    allow: (() => {
+      return this.trackThree.cars.length < 1;
+    })
+  };
+
+  trackFour = {
+    cars: [{
       car: 'CSXT-253455',
       length: '20'
-    }
-  ];
-
-  trackFour = [];
+    }],
+    allow: (() => {
+      return this.trackFour.cars.length < 1;
+    })
+  };
 
   droppedData: string;
 
@@ -70,6 +87,9 @@ export class AppComponent {
   }
 
   drop(event: CdkDragDrop<string[]>) {
+    // if (event.container.data.length <1) {
+    //   return false;
+    // }
     if (event.previousContainer === event.container) {
       moveItemInArray(
         event.container.data,
