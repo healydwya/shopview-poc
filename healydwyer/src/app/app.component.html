@@ -1,0 +1,113 @@
+<!-- Material Example -->
+<div cdkDropListGroup>
+    <div class="example-container-queue">
+        <div cdkDropList [cdkDropListData]="carQueue" cdkDropListOrientation="horizontal" class="queue-list" (cdkDropListDropped)="drop($event)">
+          <div [style.width.%]="car.length" class="example-box" *ngFor="let car of carQueue" cdkDrag>{{car.car}}</div>
+        </div>
+      </div>
+  <div class="container">
+    <div class="example-container">
+        <div cdkDropList [cdkDropListData]="trackOne" cdkDropListOrientation="vertical" class="example-list" (cdkDropListDropped)="drop($event)">
+          <div [style.width.%]="car.length" class="example-box" *ngFor="let car of trackOne" cdkDrag>{{car.car}}</div>
+        </div>
+      </div>
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="trackTwo" cdkDropListOrientation="vertical" class="example-list" (cdkDropListDropped)="drop($event)">
+          <div [style.width.%]="car.length" class="example-box" *ngFor="let car of trackTwo" cdkDrag> {{car.car}} </div>
+        </div>
+      </div>
+      <div class="example-container">
+          <div cdkDropList [cdkDropListData]="trackFour" cdkDropListOrientation="vertical" class="example-list" (cdkDropListDropped)="drop($event)">
+              <div [style.width.%]="car.length" class="example-box" *ngFor="let car of trackFour" cdkDrag>{{car.car}}</div>
+          </div>
+        </div>
+      <div class="example-container">
+        <div cdkDropList [cdkDropListData]="trackThree" cdkDropListOrientation="vertical" class="example-list" (cdkDropListDropped)="drop($event)">
+          <div [style.width.%]="car.length" class="example-box" *ngFor="let car of trackThree" cdkDrag> {{car.car}} </div>
+        </div>
+    </div>
+  </div>
+</div> 
+
+
+<!-- Testing Grid CSS -->
+
+<!-- <div class="example-container-queue">
+    <div class="queue-list ui-g-12" [(dragulaModel)]="carQueue" dragula="CAR_LIST">
+      <div [style.width.%]="car.length" class="queue-box" *ngFor="let car of carQueue">{{car.car}}</div>
+    </div>
+</div>
+<div class="calendar">
+  <ul dragula="CAR_LIST" [(dragulaModel)]="trackOne" class="day-grid">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li ></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div> -->
+
+
+<!-- Dragula Example -->
+<!-- <div>
+  <div class="example-container-queue">
+    <div class="queue-list ui-g-12" [(dragulaModel)]="carQueue" dragula="CAR_LIST">
+      <div [style.width.%]="car.length" class="queue-box" *ngFor="let car of carQueue">{{car.car}}</div>
+    </div>
+  </div>
+  <div class="tracks-area">
+    <div class="example-container" [(dragulaModel)]="trackOne" dragula="CAR_LIST">
+        <div [style.width.%]="car.length" class="example-box" *ngFor="let car of trackOne">{{car.car}}</div>
+    </div>
+    <div class="example-container" [(dragulaModel)]="trackTwo" dragula="CAR_LIST">
+        <div [style.width.%]="car.length" class="example-box" *ngFor="let car of trackTwo">{{car.car}}</div>
+    </div>
+    <div class="ui-g-3 example-container" [(dragulaModel)]="trackThree" dragula="CAR_LIST">
+        <div [style.width.%]="car.length" class="example-box" *ngFor="let car of trackThree">{{car.car}}</div>
+    </div>
+    <div class="ui-g-3 example-container" [(dragulaModel)]="trackFour" dragula="CAR_LIST">
+        <div [style.width.%]="car.length" class="example-box" *ngFor="let car of trackFour">{{car.car}}</div>
+    </div>
+  </div> -->
+  
+<!--   <div class="wrapper example-container"  dragula="CAR_LIST">
+    <div class="example-list ui-g-12">
+      <div [style.width.%]="car.length" class="example-box" *ngFor="let car of trackOne">{{car.car}}</div>
+    </div>
+    <div class="example-list ui-g-12" [(dragulaModel)]="trackTwo">
+      <div [style.width.%]="car.length" class="example-box" *ngFor="let car of trackTwo">{{car.car}}</div>
+    </div>
+  </div> -->
+
+  <!-- Angular Drag Drop Testing -->
+<!--   <div *ngFor="let car of carQueue" mwlDraggable dropData={{car.car}} dragActiveClass="drag-active">
+    Drag me!
+  </div>
+  <div mwlDraggable dropData="bar" dragActiveClass="drag-active" [dragSnapGrid]="{x: 100, y: 100}">
+    I snap to a 100 x 100 grid
+  </div>
+  <div 
+    mwlDroppable
+    (drop)="onDrop($event)"
+    dragOverClass="drop-over-active">
+    <span [hidden]="droppedData">Drop here</span>
+    <span [hidden]="!droppedData">Item dropped here with data: {{ droppedData.car }}!</span>
+  </div> -->
+
+<router-outlet></router-outlet>
