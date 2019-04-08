@@ -1,162 +1,186 @@
+.body {
+  overflow-y: hidden;
+}
+
 .container {
-    background: url('../assets/carshop.png') no-repeat fixed;
-    background-size: 1350px;
-    height: 100vh;
-    padding-top: 90px;
-    background-position-y: center;
+  background: url('../assets/carshop.png') no-repeat fixed;
+  background-size: 1350px;
+  height: 100%;
+  padding-top: 90px;
+  background-position-y: 91px;
 }
 
 .example-container {
-    height: 102px;
-    margin-top: 4px;
-    margin-bottom: 45px;
-    padding-left: 438px;
-    display: flex;
-}
-
-.example-container-queue {
-    margin-bottom: 100px;
+  height: 102px;
+  margin-top: 4px;
+  margin-bottom: 45px;
+  display: flex;
 }
 
 .tracks-area {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-gap: 1em;
-    margin: 0 auto;
-    max-width: 64em;
-    padding: 0;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 1em;
+  margin: 0 auto;
+  max-width: 64em;
+  padding: 0;
 }
 
 .queue-list {
-    //border: solid 1px #ccc;
-    min-height: 60px;
-    display: flex;
-    flex-direction: row;
-    background: #ccc;
-    .example-box {
-        width: 10%;
-    }
+  width: 100%;
+  min-height: 60px;
+  display: flex;
+  flex-direction: row;
+  background: #ccc;
+  .example-box {
+    width: 10%;
+  }
 }
 
 .example-list {
-    background: white;
-    width: 260px;
-    margin-right: 31px;
+  background: white;
+  width: 260px;
+}
+
+.car-shop-1 {
+  @extend .example-list;
+  margin-left: 128px;
+}
+
+.car-shop-2 {
+  @extend .example-list;
+  margin-right: 25px;
+  margin-left: 30px;
+}
+
+.pre-shop {
+  @extend .example-list;
+  margin-left: 51px;
+}
+
+.post-shop {
+  @extend .example-list;
+  margin-left: 104px;
 }
 
 .queue-box {
-    padding: 20px 10px;
-    display: flex;
-    flex-direction: row;
-    border: solid 1px #ccc;
-    color: rgba(0, 0, 0, 0.87);
-    align-items: center;
-    justify-content: space-between;
-    background: white;
-    font-size: 14px;
-    border-radius: 5px;
-    box-sizing: border-box;
-    cursor: move;
-    margin: 20px;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: row;
+  border: solid 1px #ccc;
+  color: rgba(0, 0, 0, 0.87);
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  font-size: 14px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  cursor: move;
+  margin: 20px;
 }
 
 .example-box {
-    @extend .queue-box;
-    min-width: 198px;
+  @extend .queue-box;
+  min-width: 230px;
+}
+
+.cdk-drop-list-group {
+  height: 100%;
 }
 
 .cdk-drag-preview {
-    box-sizing: border-box;
-    border-radius: 4px;
-    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
 }
 
 .cdk-drag-placeholder {
-    opacity: 0;
+  opacity: 0;
 }
 
 .cdk-drag-animating {
-    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
 
 .example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
-    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
 
 /* Grid CSS */
 
 header {
-    display: flex;
-    align-items: center;
-    font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1600 - 300)));
-    justify-content: center;
-    margin-bottom: 2em;
-    background: #000;
-    color: #fff;
-    min-height: 10vh;
-    text-align: center;
+  display: flex;
+  align-items: center;
+  font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1600 - 300)));
+  justify-content: center;
+  margin-bottom: 2em;
+  background: #000;
+  color: #fff;
+  min-height: 10vh;
+  text-align: center;
 }
 
 ul {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-gap: 1em;
-    margin: 0 auto;
-    max-width: 64em;
-    padding: 0;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 1em;
+  margin: 0 auto;
+  max-width: 64em;
+  padding: 0;
 }
 
 li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    margin-left: 0;
-    font-size: calc(16px + (21 - 16) * ((100vw - 300px) / (1600 - 300)));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin-left: 0;
+  font-size: calc(16px + (21 - 16) * ((100vw - 300px) / (1600 - 300)));
 }
 
 ul.weekdays {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 ul.weekdays li {
-    height: 4vw;
+  height: 4vw;
 }
 
 ul.day-grid li {
-    background-color: #eaeaea;
-    border: 1px solid #eaeaea;
-    height: 16vw;
-    width: 20vw;
-    max-height: 125px;
-    &.shop-top {
-        border-top: 10px solid #ffc0cb;
-    }
-    &.shop-top-left {
-        @extend .shop-top;
-        border-left: 10px solid #ffc0cb;
-    }
-    &.shop-top-right {
-        @extend .shop-top;
-        border-right: 10px solid #ffc0cb;
-    }
-    &.shop-bottom {
-        border-bottom: 10px solid #ffc0cb;
-    }
-    &.shop-bottom-right {
-        @extend .shop-bottom;
-        border-right: 10px solid #ffc0cb;
-    }
-    &.shop-bottom-left {
-        @extend .shop-bottom;
-        border-left: 10px solid #ffc0cb;
-    }
+  background-color: #eaeaea;
+  border: 1px solid #eaeaea;
+  height: 16vw;
+  width: 20vw;
+  max-height: 125px;
+  &.shop-top {
+    border-top: 10px solid #ffc0cb;
+  }
+  &.shop-top-left {
+    @extend .shop-top;
+    border-left: 10px solid #ffc0cb;
+  }
+  &.shop-top-right {
+    @extend .shop-top;
+    border-right: 10px solid #ffc0cb;
+  }
+  &.shop-bottom {
+    border-bottom: 10px solid #ffc0cb;
+  }
+  &.shop-bottom-right {
+    @extend .shop-bottom;
+    border-right: 10px solid #ffc0cb;
+  }
+  &.shop-bottom-left {
+    @extend .shop-bottom;
+    border-left: 10px solid #ffc0cb;
+  }
 }
 
 ul.weekdays abbr[title] {
-    border: none;
-    font-weight: 800;
-    text-decoration: none;
+  border: none;
+  font-weight: 800;
+  text-decoration: none;
 }
 
 /*   ul.day-grid li:nth-child(1),
@@ -168,65 +192,73 @@ ul.weekdays abbr[title] {
   } */
 
 @media all and (max-width: 800px) {
-    ul {
-        grid-gap: 0.25em;
-    }
-    ul.weekdays li {
-        font-size: 0;
-    }
-    ul.weekdays>li abbr:after {
-        content: attr(title);
-        font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1600 - 300)));
-        text-align: center;
-    }
+  ul {
+    grid-gap: 0.25em;
+  }
+  ul.weekdays li {
+    font-size: 0;
+  }
+  ul.weekdays > li abbr:after {
+    content: attr(title);
+    font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1600 - 300)));
+    text-align: center;
+  }
 }
 
 .example-boundary {
-    border: 1px solid blue;
+  border: 1px solid blue;
 }
 
 .example-drop {
-    height: 20vh;
-    border: 1px solid black;
+  height: 20vh;
+  border: 1px solid black;
 }
 
 /* NG Drag and Drop */
 
 [mwlDraggable] {
-    background-color: red;
-    width: 200px;
-    height: 200px;
-    position: relative;
-    z-index: 2;
-    float: left;
-    margin-right: 10px;
-    cursor: move;
+  background-color: red;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  z-index: 2;
+  float: left;
+  margin-right: 10px;
+  cursor: move;
 }
 
 [mwlDroppable] {
-    background-color: green;
-    width: 400px;
-    height: 400px;
-    z-index: 1;
-    position: relative;
-    top: 50px;
-    left: 100px;
+  background-color: green;
+  width: 400px;
+  height: 400px;
+  z-index: 1;
+  position: relative;
+  top: 50px;
+  left: 100px;
 }
 
 [mwlDraggable],
 [mwlDroppable] {
-    color: white;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .drop-over-active {
-    border: dashed 1px black;
-    background-color: lightgreen;
+  border: dashed 1px black;
+  background-color: lightgreen;
 }
 
 .drag-active {
-    z-index: 3;
+  z-index: 3;
+}
+
+.car-allocs {
+  background: url('../assets/allocations.svg') no-repeat fixed;
+  background-size: 1350px;
+  height: 100%;
+  padding-top: 90px;
+  background-position-y: 91px;
 }

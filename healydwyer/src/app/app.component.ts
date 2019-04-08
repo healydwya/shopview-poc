@@ -18,62 +18,120 @@ import { DropEvent } from 'angular-draggable-droppable';
 export class AppComponent {
   title = 'healydwyer';
   carQueue = {
-    cars: [{
-      car: 'CSXT-123456',
-      length: '10'
-    },
-    {
-      car: 'CSXT-123456',
-      length: '20'
-    },
-    {
-      car: 'CSXT-123456',
-      length: '30'
-    },
-    {
-      car: 'CSXT-123456',
-      length: '40'
-    }]
+    cars: [
+      {
+        car: 'CSXT-123456',
+        length: '10'
+      },
+      {
+        car: 'CSXT-123456',
+        length: '20'
+      },
+      {
+        car: 'CSXT-123456',
+        length: '30'
+      },
+      {
+        car: 'CSXT-123456',
+        length: '40'
+      }
+    ]
   };
 
   trackOne = {
-    cars: [{
-      car: 'CSXT-123456',
-      length: '10'
-    }],
-    allow: (() => {
+    cars: [
+      {
+        car: 'CSXT-123456',
+        length: '10'
+      }
+    ],
+    allow: () => {
       return this.trackOne.cars.length < 1;
-    })
+    }
   };
 
   trackTwo = {
-    cars: [{
-      car: 'CSXT-4567234',
-      length: '40'
-    }],
-    allow: (() => {
+    cars: [
+      {
+        car: 'CSXT-4567234',
+        length: '40'
+      }
+    ],
+    allow: () => {
       return this.trackTwo.cars.length < 1;
-    })
+    }
   };
 
   trackThree = {
-    cars: [{
-      car: 'CSXT-837462',
-      length: '20'
-    }],
-    allow: (() => {
+    cars: [
+      {
+        car: 'CSXT-837462',
+        length: '20'
+      }
+    ],
+    allow: () => {
       return this.trackThree.cars.length < 1;
-    })
+    }
   };
 
   trackFour = {
-    cars: [{
-      car: 'CSXT-253455',
-      length: '20'
-    }],
-    allow: (() => {
+    cars: [
+      {
+        car: 'CSXT-253455',
+        length: '20'
+      }
+    ],
+    allow: () => {
       return this.trackFour.cars.length < 1;
-    })
+    }
+  };
+
+  trackFive = {
+    cars: [
+      {
+        car: 'CSXT-252532',
+        length: '20'
+      }
+    ],
+    allow: () => {
+      return this.trackFive.cars.length < 1;
+    }
+  };
+
+  trackSix = {
+    cars: [
+      {
+        car: 'CSXT-252532',
+        length: '20'
+      }
+    ],
+    allow: () => {
+      return this.trackSix.cars.length < 1;
+    }
+  };
+
+  trackSeven = {
+    cars: [
+      {
+        car: 'CSXT-252532',
+        length: '20'
+      }
+    ],
+    allow: () => {
+      return this.trackSeven.cars.length < 1;
+    }
+  };
+
+  trackEight = {
+    cars: [
+      {
+        car: 'CSXT-252532',
+        length: '20'
+      }
+    ],
+    allow: () => {
+      return this.trackEight.cars.length < 1;
+    }
   };
 
   droppedData: string;
@@ -111,5 +169,9 @@ export class AppComponent {
   }
   exited(event: CdkDragExit<string[]>) {
     console.log('Exited', event.item.data);
+  }
+
+  clickEvent() {
+    console.log('box clicked');
   }
 }

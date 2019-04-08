@@ -1,5 +1,5 @@
 <!-- Material Example -->
-<div cdkDropListGroup>
+<div class="cdk-drop-list-group" cdkDropListGroup>
   <div class="example-container-queue">
     <div cdkDropList [cdkDropListData]="carQueue.cars" cdkDropListOrientation="horizontal" class="queue-list"
       (cdkDropListDropped)="drop($event)">
@@ -8,27 +8,44 @@
   </div>
   <div class="container">
     <div class="example-container">
+      <div [cdkDropListEnterPredicate]="trackSeven.allow" cdkDropList [cdkDropListData]="trackSeven.cars"
+        cdkDropListOrientation="horizontal" class="pre-shop" (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let car of trackSeven.cars" cdkDrag>{{car.car}}</div>
+      </div>
       <div [cdkDropListEnterPredicate]="trackOne.allow" cdkDropList [cdkDropListData]="trackOne.cars"
-        cdkDropListOrientation="horizontal" class="example-list" (cdkDropListDropped)="drop($event)">
+        cdkDropListOrientation="horizontal" class="car-shop-1" (cdkDropListDropped)="drop($event)">
         <div class="example-box" *ngFor="let car of trackOne.cars" cdkDrag>{{car.car}}</div>
       </div>
       <div [cdkDropListEnterPredicate]="trackTwo.allow" cdkDropList [cdkDropListData]="trackTwo.cars"
-        cdkDropListOrientation="horizontal" class="example-list" (cdkDropListDropped)="drop($event)">
+        cdkDropListOrientation="horizontal" class="car-shop-2" (cdkDropListDropped)="drop($event)">
         <div class="example-box" *ngFor="let car of trackTwo.cars" cdkDrag>{{car.car}}</div>
+      </div>
+      <div [cdkDropListEnterPredicate]="trackFive.allow" cdkDropList [cdkDropListData]="trackFive.cars"
+      cdkDropListOrientation="horizontal" class="post-shop" (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let car of trackFive.cars" cdkDrag>{{car.car}}</div>
       </div>
     </div>
     <div class="example-container">
+      <div [cdkDropListEnterPredicate]="trackEight.allow" cdkDropList [cdkDropListData]="trackEight.cars"
+        cdkDropListOrientation="horizontal" class="pre-shop" (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let car of trackEight.cars" cdkDrag>{{car.car}}</div>
+      </div>
       <div [cdkDropListEnterPredicate]="trackThree.allow" cdkDropList [cdkDropListData]="trackThree.cars"
-        cdkDropListOrientation="horizontal" class="example-list" (cdkDropListDropped)="drop($event)">
+        cdkDropListOrientation="horizontal" class="car-shop-1" (cdkDropListDropped)="drop($event)">
         <div class="example-box" *ngFor="let car of trackThree.cars" cdkDrag> {{car.car}} </div>
       </div>
       <div [cdkDropListEnterPredicate]="trackFour.allow" cdkDropList [cdkDropListData]="trackFour.cars"
-        cdkDropListOrientation="horizontal" class="example-list" (cdkDropListDropped)="drop($event)">
+        cdkDropListOrientation="horizontal" class="car-shop-2" (cdkDropListDropped)="drop($event)">
         <div class="example-box" *ngFor="let car of trackFour.cars" cdkDrag>{{car.car}}</div>
+      </div>
+      <div [cdkDropListEnterPredicate]="trackSix.allow" cdkDropList [cdkDropListData]="trackSix.cars"
+        cdkDropListOrientation="horizontal" class="post-shop" (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let car of trackSix.cars" cdkDrag>{{car.car}}</div>
       </div>
     </div>
   </div>
 </div>
+
 
 
 <!-- Testing Grid CSS -->
@@ -88,10 +105,10 @@
   </div> -->
 
 <!--   <div class="wrapper example-container"  dragula="CAR_LIST">
-    <div class="example-list ui-g-12">
+    <div class="drop-list ui-g-12">
       <div  class="example-box" *ngFor="let car of trackOne">{{car.car}}</div>
     </div>
-    <div class="example-list ui-g-12" [(dragulaModel)]="trackTwo">
+    <div class="drop-list ui-g-12" [(dragulaModel)]="trackTwo">
       <div  class="example-box" *ngFor="let car of trackTwo">{{car.car}}</div>
     </div>
   </div> -->
