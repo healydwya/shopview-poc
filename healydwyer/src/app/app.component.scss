@@ -3,7 +3,6 @@
 }
 
 .container {
-  background: url('../assets/carshop.png') no-repeat fixed;
   background-size: 1350px;
   height: 100%;
   padding-top: 90px;
@@ -15,6 +14,7 @@
   margin-top: 4px;
   margin-bottom: 45px;
   display: flex;
+  background: #f2f2f2;
 }
 
 .tracks-area {

@@ -29,4 +29,4 @@ import { DragAndDropModule } from 'angular-draggable-droppable';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
