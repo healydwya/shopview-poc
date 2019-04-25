@@ -6,7 +6,31 @@
       <div class="example-box" *ngFor="let car of carQueue.cars" cdkDrag>{{car.car}}</div>
     </div>
   </div>
-  <div class="container">
+  <div class="example-container-queue">
+    <div cdkDropList [cdkDropListData]="carQueue.cars" cdkDropListOrientation="horizontal" class="queue-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let car of carQueue.cars" cdkDrag>{{car.car}}</div>
+    </div>
+  </div>
+  <div class="example-container-queue">
+    <div cdkDropList [cdkDropListData]="carQueue.cars" cdkDropListOrientation="horizontal" class="queue-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let car of carQueue.cars" cdkDrag>{{car.car}}</div>
+    </div>
+  </div>
+  <div class="example-container-queue">
+    <div cdkDropList [cdkDropListData]="carQueue.cars" cdkDropListOrientation="horizontal" class="queue-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let car of carQueue.cars" cdkDrag>{{car.car}}</div>
+    </div>
+  </div>
+  <div class="example-container-queue">
+    <div cdkDropList [cdkDropListData]="carQueue.cars" cdkDropListOrientation="horizontal" class="queue-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let car of carQueue.cars" cdkDrag>{{car.car}}</div>
+    </div>
+  </div>
+<!--   <div class="container">
     <div class="example-container">
       <div [cdkDropListEnterPredicate]="trackSeven.allow" cdkDropList [cdkDropListData]="trackSeven.cars"
         cdkDropListOrientation="horizontal" class="pre-shop" (cdkDropListDropped)="drop($event)">
@@ -43,7 +67,7 @@
         <div class="example-box" *ngFor="let car of trackSix.cars" cdkDrag>{{car.car}}</div>
       </div>
     </div>
-  </div>
+  </div> -->
 </div>
 
 

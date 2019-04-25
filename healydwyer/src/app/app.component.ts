@@ -34,6 +34,166 @@ export class AppComponent {
       {
         car: 'CSXT-123456',
         length: '40'
+      },
+      {
+        car: 'CSXT-123456',
+        length: '10'
+      },
+      {
+        car: 'CSXT-123456',
+        length: '20'
+      },
+      {
+        car: 'CSXT-123456',
+        length: '30'
+      },
+      {
+        car: 'CSXT-123456',
+        length: '40'
+      }
+    ]
+  };
+  carQueue2 = {
+    cars: [
+      {
+        car: 'CSXT-123456',
+        length: '10'
+      },
+      {
+        car: 'CSXT-123456',
+        length: '20'
+      },
+      {
+        car: 'CSXT-123456',
+        length: '30'
+      },
+      {
+        car: 'CSXT-123456',
+        length: '40'
+      },
+      {
+        car: 'CSXT-123456',
+        length: '10'
+      },
+      {
+        car: 'CSXT-123456',
+        length: '20'
+      },
+      {
+        car: 'CSXT-123456',
+        length: '30'
+      },
+      {
+        car: 'CSXT-123456',
+        length: '40'
+      }
+    ]
+  };
+  carQueue5 = {
+    cars: [
+      {
+        car: 'CSXT-123456',
+        length: '10'
+      },
+      {
+        car: 'CSXT-123456',
+        length: '20'
+      },
+      {
+        car: 'CSXT-123456',
+        length: '30'
+      },
+      {
+        car: 'CSXT-123456',
+        length: '40'
+      },
+      {
+        car: 'CSXT-123456',
+        length: '10'
+      },
+      {
+        car: 'CSXT-123456',
+        length: '20'
+      },
+      {
+        car: 'CSXT-123456',
+        length: '30'
+      },
+      {
+        car: 'CSXT-123456',
+        length: '40'
+      }
+    ]
+  };
+  carQueue3 = {
+    cars: [
+      {
+        car: 'CSXT-123456',
+        length: '10'
+      },
+      {
+        car: 'CSXT-123456',
+        length: '20'
+      },
+      {
+        car: 'CSXT-123456',
+        length: '30'
+      },
+      {
+        car: 'CSXT-123456',
+        length: '40'
+      },
+      {
+        car: 'CSXT-123456',
+        length: '10'
+      },
+      {
+        car: 'CSXT-123456',
+        length: '20'
+      },
+      {
+        car: 'CSXT-123456',
+        length: '30'
+      },
+      {
+        car: 'CSXT-123456',
+        length: '40'
+      }
+    ]
+  };
+  carQueue4 = {
+    cars: [
+      {
+        car: 'CSXT-123456',
+        length: '10'
+      },
+      {
+        car: 'CSXT-123456',
+        length: '20'
+      },
+      {
+        car: 'CSXT-123456',
+        length: '30'
+      },
+      {
+        car: 'CSXT-123456',
+        length: '40'
+      },
+      {
+        car: 'CSXT-123456',
+        length: '10'
+      },
+      {
+        car: 'CSXT-123456',
+        length: '20'
+      },
+      {
+        car: 'CSXT-123456',
+        length: '30'
+      },
+      {
+        car: 'CSXT-123456',
+        length: '40'
       }
     ]
   };
