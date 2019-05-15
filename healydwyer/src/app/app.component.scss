@@ -26,15 +26,20 @@
   padding: 0;
 }
 
-.queue-list {
-  width: 100%;
+.track-list {
+  width: max-content;
   min-height: 60px;
   display: flex;
   flex-direction: row;
-  background: #ccc;
-  .example-box {
-    width: 10%;
+  background: #f2f2f2;
+  margin: 20px;
+  &.queue-list {
+    overflow: scroll;
+    background: lightblue;
   }
+}
+
+.scrollable-tracks {
   overflow: scroll;
 }
 
@@ -82,7 +87,7 @@
 
 .example-box {
   @extend .queue-box;
-  min-width: 230px;
+  width: 20%;
 }
 
 .cdk-drop-list-group {
@@ -92,8 +97,7 @@
 .cdk-drag-preview {
   box-sizing: border-box;
   border-radius: 4px;
-  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
-    0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
 }
 
 .cdk-drag-placeholder {
@@ -257,7 +261,7 @@ ul.weekdays abbr[title] {
 }
 
 .car-allocs {
-  background: url('../assets/allocations.svg') no-repeat fixed;
+  background: url("../assets/allocations.svg") no-repeat fixed;
   background-size: 1350px;
   height: 100%;
   padding-top: 90px;

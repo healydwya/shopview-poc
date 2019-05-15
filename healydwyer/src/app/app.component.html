@@ -1,33 +1,39 @@
 <!-- Material Example -->
 <div class="cdk-drop-list-group" cdkDropListGroup>
   <div class="example-container-queue">
-    <div cdkDropList [cdkDropListData]="carQueue.cars" cdkDropListOrientation="horizontal" class="queue-list"
+    <div cdkDropList [cdkDropListData]="carQueue.cars" cdkDropListOrientation="horizontal" class="queue-list track-list"
       (cdkDropListDropped)="drop($event)">
       <div class="example-box" *ngFor="let car of carQueue.cars" cdkDrag>{{car.car}}</div>
     </div>
   </div>
-  <div class="example-container-queue">
-    <div cdkDropList [cdkDropListData]="carQueue.cars" cdkDropListOrientation="horizontal" class="queue-list"
-      (cdkDropListDropped)="drop($event)">
-      <div class="example-box" *ngFor="let car of carQueue.cars" cdkDrag>{{car.car}}</div>
+  <div class="scrollable-tracks">
+    <div class="example-container-queue">
+      <div cdkDropList [cdkDropListData]="carQueue.cars" cdkDropListOrientation="horizontal" class="track-list"
+        (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let car of carQueue.cars" cdkDrag>
+          <p class="car-id"> {{car.car}} </p>
+          <p class="car-label"></p>
+          
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="example-container-queue">
-    <div cdkDropList [cdkDropListData]="carQueue.cars" cdkDropListOrientation="horizontal" class="queue-list"
-      (cdkDropListDropped)="drop($event)">
-      <div class="example-box" *ngFor="let car of carQueue.cars" cdkDrag>{{car.car}}</div>
+    <div class="example-container-queue">
+      <div cdkDropList [cdkDropListData]="carQueue.cars" cdkDropListOrientation="horizontal" class="track-list"
+        (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let car of carQueue.cars" cdkDrag>{{car.car}}</div>
+      </div>
     </div>
-  </div>
-  <div class="example-container-queue">
-    <div cdkDropList [cdkDropListData]="carQueue.cars" cdkDropListOrientation="horizontal" class="queue-list"
-      (cdkDropListDropped)="drop($event)">
-      <div class="example-box" *ngFor="let car of carQueue.cars" cdkDrag>{{car.car}}</div>
+    <div class="example-container-queue">
+      <div cdkDropList [cdkDropListData]="carQueue.cars" cdkDropListOrientation="horizontal" class="track-list"
+        (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let car of carQueue.cars" cdkDrag>{{car.car}}</div>
+      </div>
     </div>
-  </div>
-  <div class="example-container-queue">
-    <div cdkDropList [cdkDropListData]="carQueue.cars" cdkDropListOrientation="horizontal" class="queue-list"
-      (cdkDropListDropped)="drop($event)">
-      <div class="example-box" *ngFor="let car of carQueue.cars" cdkDrag>{{car.car}}</div>
+    <div class="example-container-queue">
+      <div cdkDropList [cdkDropListData]="carQueue.cars" cdkDropListOrientation="horizontal" class="track-list"
+        (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let car of carQueue.cars" cdkDrag>{{car.car}}</div>
+      </div>
     </div>
   </div>
 <!--   <div class="container">
